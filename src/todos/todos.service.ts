@@ -8,7 +8,7 @@ export class TodosService {
         {
             id: 1,
             title: "Faire les courses",
-            description: "Aller au marché pour l'alimentaire et en grande surface pour l'L'hygiène.",
+            description: "Aller au marché pour l'alimentaire et en grande surface pour l'hygiène.",
             isDone: false
         },
         {
@@ -27,6 +27,10 @@ export class TodosService {
 
     findAll(): Todo[] {
         return this.todos;
+    }
+
+    findOne(id: number): Todo {
+        return this.todos.find(todo => todo.id === id);
     }
 
     create(todo: Todo) {
